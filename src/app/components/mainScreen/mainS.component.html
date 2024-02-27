@@ -1,0 +1,25 @@
+<main>
+    <section class="video-grid">
+      <div class="video-preview" *ngFor="let video of videoData">
+        <div class="thumbnail-row">
+          <img class="thumbnail" [src]="'assets/thumbnails/' + video.thumbnail" />
+          <div class="video-time">{{ video.time }}</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <div class="channel-picture-container">
+              <a class="video-title" href="#">
+                <img class="profile-picture" [src]="'assets/channel images/' + video.channelImage" />
+              </a>
+            </div>
+          </div>
+          <div class="video-info">
+            <a class="video-title" href="#"> {{ video.title }} </a>
+            <p class="video-author">{{ video.author }}</p>
+            <p class="video-stats">{{ video.views }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  

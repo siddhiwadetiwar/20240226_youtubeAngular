@@ -1,0 +1,103 @@
+<nav class="side-bar">
+  <div class="side-bar-flex">
+    <div class="general-section">
+      <div class="general-button-container">
+        <div class="side-bar-home-button">
+          <div class="button-icon-container">
+            <img
+              class="{{ generalButtons[0].class }}"
+              [src]="'assets/icons/' + generalButtons[0].icon"
+            />
+          </div>
+          <a class="button-text" routerLink="">{{ generalButtons[0].text }}</a>
+        </div>
+
+        <div class="side-bar-button">
+          <div class="button-icon-container">
+            <img
+              class="{{ generalButtons[1].class }}"
+              [src]="'assets/icons/' + generalButtons[1].icon"
+            />
+          </div>
+          <div class="button-text">{{ generalButtons[1].text }}</div>
+        </div>
+
+        <div class="side-bar-button">
+          <div class="button-icon-container">
+            <img
+              class="{{ generalButtons[2].class }}"
+              [src]="'assets/icons/' + generalButtons[2].icon"
+            />
+          </div>
+         <a class="button-text" routerLink="subscription">{{ generalButtons[2].text }}</a>
+        </div>
+
+        <div class="side-bar-button">
+          <div class="button-icon-container">
+            <img
+              class="{{ generalButtons[3].class }}"
+              [src]="'assets/icons/' + generalButtons[3].icon"
+            />
+          </div>
+          <div class="button-text">{{ generalButtons[3].text }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="you-section">
+      <div class="you-button-container">
+        <div class="side-bar-you-button">
+          <div class="you-text">You</div>
+          <img class="greater-than-icon" src="assets/icons/greater than.png" />
+        </div>
+
+        <div class="side-bar-button" *ngFor="let button of youButtons">
+          <div class="button-icon-container">
+            <img
+              class="{{ button.class }}"
+              [src]="'assets/icons/' + button.icon"
+            />
+          </div>
+          <div class="button-text">{{ button.text }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="explore-section">
+      <div class="explore-button-container">
+        <div class="explore-text">Explore</div>
+        <div class="explore-button">
+          <div class="side-bar-button">
+            <div class="button-icon-container">
+              <img
+                class="{{ exploreButtons[0].class }}"
+                [src]="'assets/icons/' + exploreButtons[0].icon"
+              />
+            </div>
+            <div class="button-text">{{ exploreButtons[0].text }}</div>
+          </div>
+
+          <div class="side-bar-button">
+            <div class="button-icon-container">
+              <img
+                class="{{ exploreButtons[1].class }}"
+                [src]="'assets/icons/' + exploreButtons[1].icon"
+              />
+            </div>
+            <div class="button-text">{{ exploreButtons[1].text }}</div>
+          </div>
+
+          <div class="side-bar-button">
+            <div class="button-icon-container">
+              <img
+                class="{{ exploreButtons[2].class }}"
+                [src]="'assets/icons/' + exploreButtons[2].icon"
+              />
+            </div>
+            <div class="button-text">{{ exploreButtons[2].text }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
