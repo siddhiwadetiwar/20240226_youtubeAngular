@@ -1,0 +1,110 @@
+<nav class="side-bar">
+  <!-- Container for the side-bar -->
+  <div class="side-bar-flex">
+    <!-- Flex container for side-bar sections -->
+
+    <!-- General Section -->
+    <div class="general-section">
+      <!-- Container for general buttons -->
+      <div class="general-button-container">
+
+        <!-- Home Button -->
+        <div class="side-bar-home-button">
+          <!-- Container for home button -->
+          <div class="button-icon-container">
+            <!-- Container for button icon -->
+            <img class="{{ generalButtons[0].class }}" [src]="'assets/icons/' + generalButtons[0].icon" />
+          </div>
+          <a class="button-text" routerLink="">{{ generalButtons[0].text }}</a>
+        </div>
+
+        <!-- General Buttons 1-3 -->
+        <!-- Repeated structure for three general buttons -->
+        <div class="side-bar-button">
+          <div class="button-icon-container">
+            <img class="{{ generalButtons[1].class }}" [src]="'assets/icons/' + generalButtons[1].icon" />
+          </div>
+          <div class="button-text">{{ generalButtons[1].text }}</div>
+        </div>
+
+        <!-- Subscription Button -->
+        <div class="side-bar-button">
+          <div class="button-icon-container">
+            <img class="{{ generalButtons[2].class }}" [src]="'assets/icons/' + generalButtons[2].icon" />
+          </div>
+          <a class="button-text" routerLink="subscription">{{ generalButtons[2].text }}</a>
+        </div>
+
+        <!-- Another General Button -->
+        <div class="side-bar-button">
+          <div class="button-icon-container">
+            <img class="{{ generalButtons[3].class }}" [src]="'assets/icons/' + generalButtons[3].icon" />
+          </div>
+          <div class="button-text">{{ generalButtons[3].text }}</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- You Section -->
+    <div class="you-section">
+      <!-- Container for "You" section -->
+      <div class="you-button-container">
+
+        <!-- "You" Button -->
+        <div class="side-bar-you-button">
+          <!-- Container for "You" button -->
+          <div class="you-text">You</div>
+          <img class="greater-than-icon" src="assets/icons/greater than.png" />
+        </div>
+
+        <!-- You Buttons -->
+        <!-- Repeated structure for dynamic "You" buttons -->
+        <div class="side-bar-button" *ngFor="let button of youButtons">
+          <div class="button-icon-container">
+            <img class="{{ button.class }}" [src]="'assets/icons/' + button.icon" />
+          </div>
+          <div class="button-text">{{ button.text }}</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Explore Section -->
+    <div class="explore-section">
+      <!-- Container for "Explore" section -->
+      <div class="explore-button-container">
+
+        <!-- "Explore" Text -->
+        <div class="explore-text">Explore</div>
+
+        <!-- Explore Buttons -->
+        <!-- Repeated structure for three explore buttons -->
+        <div class="explore-button">
+          <div class="side-bar-button">
+            <div class="button-icon-container">
+              <img class="{{ exploreButtons[0].class }}" [src]="'assets/icons/' + exploreButtons[0].icon" />
+            </div>
+            <div class="button-text">{{ exploreButtons[0].text }}</div>
+          </div>
+
+          <!-- Another Explore Button -->
+          <div class="side-bar-button">
+            <div class="button-icon-container">
+              <img class="{{ exploreButtons[1].class }}" [src]="'assets/icons/' + exploreButtons[1].icon" />
+            </div>
+            <div class="button-text">{{ exploreButtons[1].text }}</div>
+          </div>
+
+          <!-- Another Explore Button -->
+          <div class="side-bar-button">
+            <div class="button-icon-container">
+              <img class="{{ exploreButtons[2].class }}" [src]="'assets/icons/' + exploreButtons[2].icon" />
+            </div>
+            <div class="button-text">{{ exploreButtons[2].text }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

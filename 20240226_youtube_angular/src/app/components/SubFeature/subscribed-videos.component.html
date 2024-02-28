@@ -1,0 +1,24 @@
+<main> <!-- Opening main tag for the main content of the page -->
+  <section class="video-grid"> <!-- Creating a section with class "video-grid" for organizing video content -->
+    <div class="video-preview" *ngFor="let video of videoData"> <!-- Using Angular ngFor directive to iterate over videoData and create video preview elements -->
+      <div class="thumbnail-row"> <!-- Container for video thumbnail and time information -->
+        <img class="thumbnail" [src]="'assets/thumbnails/' + video.thumbnail" /> <!-- Displaying video thumbnail with dynamic source based on video data -->
+        <div class="video-time">{{ video.time }}</div> <!-- Displaying video duration/time -->
+      </div>
+      <div class="video-info-grid"> <!-- Container for video information grid -->
+        <div class="channel-picture"> <!-- Container for the channel picture -->
+          <div class="channel-picture-container">
+            <a class="video-title" href="#"> <!-- Link to video title (Note: "#" is a placeholder, should be replaced with an actual link) -->
+              <img class="profile-picture" [src]="'assets/channel images/' + video.channelImage" /> <!-- Displaying channel profile picture with dynamic source -->
+            </a>
+          </div>
+        </div>
+        <div class="video-info"> <!-- Container for general video information -->
+          <a class="video-title" href="#"> {{ video.title }} </a> <!-- Link to video title with dynamic content -->
+          <p class="video-author">{{ video.author }}</p> <!-- Displaying video author's name -->
+          <p class="video-stats">{{ video.views }}</p> <!-- Displaying video views/stats -->
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,87 @@
+<!-- Top bar section -->
+<header class="top-bar">
+
+  <!-- Left section -->
+  <div class="left-section">
+    <!-- Menu button with icon -->
+    <button class="menu-button">
+      <img class="menu-icon" [src]="menuIconUrl" />
+    </button>
+
+    <!-- YouTube logo container -->
+    <div class="youtube-logo-container">
+      <img class="youtube-logo" [src]="youtubeLogoUrl" />
+    </div>
+  </div>
+
+  <!-- Middle section -->
+  <div class="middle-section">
+    <!-- Search bar input -->
+    <input class="search-bar" type="search" placeholder="Search" />
+
+    <!-- Search button with icon -->
+    <button class="search-button">
+      <img class="search-icon" [src]="searchIconUrl" />
+    </button>
+
+    <!-- Voice search button with icon -->
+    <button class="voice-search-button">
+      <img class="voice-search-icon" [src]="voiceSearchIconUrl" />
+    </button>
+  </div>
+
+  <!-- Right section -->
+  <div class="right-section">
+    <!-- Upload button with icon -->
+    <button class="upload-button">
+      <img class="upload-icon" [src]="uploadIconUrl" />
+    </button>
+
+    <!-- Notifications button with icon and count -->
+    <button class="notifications-button">
+      <img class="notifications-icon" [src]="notificationsIconUrl" />
+      <div class="notifications-count">{{ notificationsCount }}</div>
+    </button>
+
+    <!-- Profile button with icon and click event to toggle settings menu -->
+    <button class="profile-button" (click)="toggleSettingsMenu()">
+      <img class="profile-icon" [src]="profileIconUrl" />
+    </button>
+  </div>
+
+  <!-- Settings menu -->
+  <div class="settings-menu {{ settingsMenuOpen ? 'settings-menu-height' : ' '}}">
+    <div class="settings-menu-inner">
+
+      <!-- User profile section -->
+      <div class="user-profile">
+        <img src="assets/icons/use.jpg">
+        <div>
+          <p>Siddhi</p>
+          <p>See your profile</p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Settings and Privacy link -->
+      <div class="settings-links">
+        <img src="assets/icons/setting.png" class="settings-icon">
+        <a href="#" routerLink="settings">Settings & Privacy</a>
+      </div>
+
+      <!-- Google Account link -->
+      <div class="settings-links">
+        <img src="assets/icons/google.png" class="google-icon">
+        <a href="#">Google Account</a>
+      </div>
+
+      <!-- Sign Out link -->
+      <div class="settings-links">
+        <img src="assets/icons/logout.png" class="logout-icon">
+        <a href="#">Sign Out</a>
+      </div>
+
+    </div>
+  </div>
+
+</header>

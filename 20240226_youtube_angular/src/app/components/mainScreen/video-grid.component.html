@@ -1,0 +1,59 @@
+<!-- Start of the main section of the webpage -->
+<main>
+
+  <!-- Video grid section -->
+  <section class="video-grid">
+
+    <!-- Video preview container, using Angular ngFor directive for iteration -->
+    <div class="video-preview" *ngFor="let video of videoData">
+
+      <!-- Thumbnail row for each video -->
+      <div class="thumbnail-row">
+
+        <!-- Displaying video thumbnail using dynamic source binding -->
+        <img class="thumbnail" [src]="'assets/thumbnails/' + video.thumbnail" />
+
+        <!-- Displaying video duration -->
+        <div class="video-time">{{ video.time }}</div>
+
+      </div>
+
+      <!-- Video information grid -->
+      <div class="video-info-grid">
+
+        <!-- Channel picture container -->
+        <div class="channel-picture">
+
+          <!-- Channel picture link -->
+          <div class="channel-picture-container">
+            <a class="video-title" href="#">
+
+              <!-- Displaying channel profile picture using dynamic source binding -->
+              <img class="profile-picture" [src]="'assets/channel images/' + video.channelImage" />
+
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Video information details -->
+        <div class="video-info">
+
+          <!-- Video title link -->
+          <a class="video-title" href="#"> {{ video.title }} </a>
+
+          <!-- Video author -->
+          <p class="video-author">{{ video.author }}</p>
+
+          <!-- Video views count -->
+          <p class="video-stats">{{ video.views }}</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
